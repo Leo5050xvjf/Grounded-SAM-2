@@ -14,6 +14,7 @@ from grounding_dino.groundingdino.util.inference import load_model, load_image, 
 """
 Hyper parameters
 """
+
 TEXT_PROMPT = "car. tire."
 IMG_PATH = "notebooks/images/truck.jpg"
 SAM2_CHECKPOINT = "./checkpoints/sam2.1_hiera_large.pt"

@@ -17,13 +17,16 @@ from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection
 """
 Hyper parameters
 """
+TEXT_PROMPT = "egg white. wok. wok ladle. metal bowl."
+IMG = "notebooks/images/sample2.png"
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--grounding-model', default="IDEA-Research/grounding-dino-tiny")
-parser.add_argument("--text-prompt", default="car. tire.")
-parser.add_argument("--img-path", default="notebooks/images/truck.jpg")
+parser.add_argument("--text-prompt", default=TEXT_PROMPT)
+parser.add_argument("--img-path", default=IMG)
 parser.add_argument("--sam2-checkpoint", default="./checkpoints/sam2.1_hiera_large.pt")
 parser.add_argument("--sam2-model-config", default="configs/sam2.1/sam2.1_hiera_l.yaml")
-parser.add_argument("--output-dir", default="outputs/grounded_sam2_hf_demo")
+parser.add_argument("--output-dir", default="outputs/grounded_sam2_hf_demo3")
 parser.add_argument("--no-dump-json", action="store_true")
 parser.add_argument("--force-cpu", action="store_true")
 args = parser.parse_args()
@@ -77,8 +80,8 @@ with torch.no_grad():
 results = processor.post_process_grounded_object_detection(
     outputs,
     inputs.input_ids,
-    box_threshold=0.4,
-    text_threshold=0.3,
+    box_threshold=0.3,
+    text_threshold=0.2,
     target_sizes=[image.size[::-1]]
 )
 
