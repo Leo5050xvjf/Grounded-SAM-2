@@ -17,11 +17,12 @@ from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection
 """
 Hyper parameters
 """
-TEXT_PROMPT = "egg white. wok. wok ladle. metal bowl."
-IMG = "notebooks/images/sample2.png"
+# TEXT_PROMPT = "metal wok."
+TEXT_PROMPT = "metal wok."
+IMG = "/home/leo/AI/Grounded-SAM-2/assets/rgb/000000.png"
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--grounding-model', default="IDEA-Research/grounding-dino-tiny")
+parser.add_argument('--grounding-model', default="IDEA-Research/grounding-dino-base")
 parser.add_argument("--text-prompt", default=TEXT_PROMPT)
 parser.add_argument("--img-path", default=IMG)
 parser.add_argument("--sam2-checkpoint", default="./checkpoints/sam2.1_hiera_large.pt")

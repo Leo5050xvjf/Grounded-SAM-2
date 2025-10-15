@@ -151,3 +151,6 @@ outputs/
 *.png
 *.jpg
 *.mp4
+*.txt
+*.json
+yolo_dataset_all4/
