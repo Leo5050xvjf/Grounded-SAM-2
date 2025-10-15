@@ -39,8 +39,8 @@ python grounded_sam2_hf_video_perframe.py   \
 --min-bbox-side 150 \
 --output-dir outputs/wok_perframe_res   \
 --write-video --start-frame 0
-#metal spatula.
 
+#metal spatula.
 python grounded_sam2_hf_video_perframe.py   \
 --video-path ./assets/kitchen.mp4   \
 --text-prompt "metal spatula."   \
@@ -62,7 +62,7 @@ python script/filter_all4_yolo.py
 python script/split_8_1_1_stride10.py \
   --src yolo_dataset_all4 \
   --src-split train \
-  --dst yolo_dataset_all4_split \
+  --dst yolo_dataset_all4_split
 
 
 mv yolo_dataset_all4_split/ ../../yolov11-seg_ros/

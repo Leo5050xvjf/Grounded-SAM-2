@@ -51,8 +51,8 @@ def main():
     parser.add_argument("--output-dir", default="outputs_large/grounded_sam2_hf_video")
     parser.add_argument("--box-threshold", type=float, default=0.5)
     parser.add_argument("--text-threshold", type=float, default=0.3)
-    parser.add_argument("--max-bbox-side", type=float, default=300.0, help="bbox 任一邊長 > 此值(像素) 就濾除")
-    parser.add_argument("--min-bbox-side", type=float, default=100.0, help="bbox 任一邊長 < 此值(像素) 就濾除")
+    parser.add_argument("--max-bbox-side", type=float, default=310.0, help="bbox 任一邊長 > 此值(像素) 就濾除")
+    parser.add_argument("--min-bbox-side", type=float, default=10.0, help="bbox 任一邊長 < 此值(像素) 就濾除")
 
     parser.add_argument("--start-frame", type=int, default=0)
     parser.add_argument("--end-frame", type=int, default=-1, help="-1 表示到最後")
