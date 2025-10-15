@@ -154,3 +154,4 @@ outputs/
 *.txt
 *.json
 yolo_dataset_all4/
+!requirements.txt
